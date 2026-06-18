@@ -16616,6 +16616,10 @@ function eagerMountAllPages() {
     _pagesInitialized['pg-wais'] = true;
     try { if (typeof mountWAIS   === 'function') mountWAIS();   } catch(e){}
   }
+  if (!_pagesInitialized['pg-wisc2']) {
+    _pagesInitialized['pg-wisc2'] = true;
+    try { if (typeof calcularTudo === 'function') calcularTudo(); } catch(e){}
+  }
   if (_questPages && typeof window._questInit === 'function') {
     var fn = window._questInit;
     window._questInit = null;
